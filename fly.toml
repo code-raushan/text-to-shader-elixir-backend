@@ -1,20 +1,20 @@
-# fly.toml app configuration file generated for text-to-shader-elixir-backend on 2025-07-08T18:44:32Z
+# fly.toml app configuration file generated for text-to-shader-backend on 2025-07-09T02:09:09+05:30
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'text-to-shader-elixir-backend'
+app = 'text-to-shader-backend'
 primary_region = 'bom'
 kill_signal = 'SIGTERM'
 
 [build]
 
 [env]
-  PHX_HOST = 'text-to-shader-elixir-backend.fly.dev'
+  PHX_HOST = 'text-to-shader-backend.fly.dev'
   PORT = '8080'
 
 [http_service]
-  internal_port = 4000
+  internal_port = 8080
   force_https = true
   auto_stop_machines = 'stop'
   auto_start_machines = true
@@ -30,4 +30,3 @@ kill_signal = 'SIGTERM'
   memory = '1gb'
   cpu_kind = 'shared'
   cpus = 1
-  memory_mb = 1024

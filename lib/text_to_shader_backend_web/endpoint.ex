@@ -51,7 +51,7 @@ defmodule TextToShaderBackendWeb.Endpoint do
 
   # CORS plug to handle preflight requests
   plug CORSPlug,
-    origin: ["http://localhost:5173"],
+    origin: ["https://calculator-and-shader-display-frontend.fly.dev"],
     headers: ["content-type"],
     credentials: true
 
