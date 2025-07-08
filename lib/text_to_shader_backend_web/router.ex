@@ -20,6 +20,12 @@ defmodule TextToShaderBackendWeb.Router do
     get "/", PageController, :home
   end
 
+  scope "/api", TextToShaderBackendWeb do
+    pipe_through :api
+
+    post "/shader", ShaderController, :generate_shader_code
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", TextToShaderBackendWeb do
   #   pipe_through :api

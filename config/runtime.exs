@@ -1,4 +1,8 @@
 import Config
+import Dotenvy
+
+Dotenvy.source!(Path.expand(".env"))
+|> Enum.each(fn {key, value} -> System.put_env(key, value) end)
 
 # config/runtime.exs is executed for all environments, including
 # during releases. It is executed after compilation and before the

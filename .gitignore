@@ -35,3 +35,4 @@ text_to_shader_backend-*.tar
 npm-debug.log
 /assets/node_modules/
 
+.env
