@@ -48,5 +48,12 @@ defmodule TextToShaderBackendWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
+
+  # CORS plug to handle preflight requests
+  plug CORSPlug,
+    origin: ["http://localhost:5173"],
+    headers: ["content-type"],
+    credentials: true
+
   plug TextToShaderBackendWeb.Router
 end

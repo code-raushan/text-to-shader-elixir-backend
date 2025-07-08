@@ -56,7 +56,8 @@ defmodule TextToShaderBackend.MixProject do
       {:dns_cluster, "~> 0.1.1"},
       {:bandit, "~> 1.5"},
       {:httpoison, "~> 2.2"},
-      {:dotenvy, "~> 1.0.0"}
+      {:dotenvy, "~> 1.0.0"},
+      {:cors_plug, "~> 3.0"}
     ]
   end
 
